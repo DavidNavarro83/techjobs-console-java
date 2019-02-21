@@ -111,6 +111,27 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        System.out.println("printJobs is not implemented yet");
+        if (someJobs == null || someJobs.size() < 1) {
+            System.out.println("There are no jobs that match this search criteria.");
+        } else {
+
+
+            for (HashMap<String, String> row : someJobs) {
+
+                System.out.println("******");
+//        System.out.println("position type: Data Scientist / Business Intelligence");
+//        System.out.println("name: Sr. IT Analyst (Data/BI)");
+//        System.out.println("employer: Bull Moose Industries");
+//        System.out.println("location: Saint Louis");
+//        System.out.println("core competency: Statistical Analysis");
+                System.out.println("position type: " + row.get("position type"));
+                System.out.println("name: " + row.get("name"));
+                System.out.println("employer: " + row.get("employer"));
+                System.out.println("location: " + row.get("location"));
+                System.out.println("core competency: " + row.get("core competency"));
+            }
+
+        }
+
     }
 }
